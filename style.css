@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+  body {
+    background-color: #1a1a1a;
+    font-family: 'Days One', sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin: 80px 0 40px;
+    color: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ff5500;
+    font-family: 'Gravitas One', serif;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-list li {
+    margin: 0 20px;
+    transition: 0.3s;
+  }
+  
+  .nav-list li:hover {
+    transform: scale(1.1);
+  }
+
+  .menu-toggle, .burger-icon {
+    display: none;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 10%;
+  }
+  
+  .hero-text h3 {
+    color: #888;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .hero-text h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text h1 {
+    font-size: 36px;
+    color: #ff5500;
+    margin-bottom: 25px;
+  }
+  
+  .images img {
+    width: 30px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  .buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  button {
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-family: 'Days One';
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  button:first-child {
+    background: #ff5500;
+    color: #fff;
+    border: none;
+  }
+
+  button:first-child:hover {
+      background: #e64d00;
+  }
+  
+  button.outline {
+    background: transparent;
+    border: 2px solid #ff5500;
+    color: #fff;
+  }
+
+  button.outline:hover {
+      background: rgba(255, 85, 0, 0.1);
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222222;
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px 60px;
+    border-radius: 20px;
+    border: 1px solid #333;
+  }
+
+  .stat-item {
+      text-align: center;
+      flex: 1;
+  }
+
+  .stat-item h3 {
+      font-size: 32px;
+      color: #ff5500;
+      margin-bottom: 5px;
+  }
+
+  .stat-item p {
+      font-size: 16px;
+      color: #aaa;
+      text-transform: lowercase;
+  }
+
+  .stat-divider {
+      width: 1px;
+      height: 60px;
+      background: #444;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 10%;
+  }
+  
+  .card {
+    background: #222;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    border: 1px solid #ff5500;
+  }
+  
+  .card h3 {
+    color: #ff5500;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .card p {
+      color: #bbb;
+      font-size: 15px;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    gap: 50px;
+  }
+  
+  .about-text p {
+      margin-bottom: 20px;
+      color: #ccc;
+  }
+  .skills {
+    padding: 0 10%;
+    margin-bottom: 100px;
+  }
+  
+  .skill {
+    margin-bottom: 30px;
+  }
+
+  .skill-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+  }
+  
+  .skill h3 {
+    color: #888;
+  }
+  
+  .line {
+    width: 100%;
+    height: 10px;
+    background: #ff5500;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 85, 0, 0.3);
+  }
+
+  .projects {
+    padding: 0 5%;
+  }
+  
+  .projects-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .project {
+    width: 32%;
+    text-align: center;
+  }
+  
+  .project-box {
+    width: 100%;
+    height: 200px;
+    background-color: #222;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+    border: 1px solid #333;
+  }
+
+  .project-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 85, 0, 0.4);
+  }
+
+  .project-box.tall {
+    height: 280px;
+  }
+  
+  .project p {
+    font-size: 14px;
+    color: #eee;
+  }
+
+  .project p strong {
+      color: #ff5500;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+  }
+
+  .contact {
+    padding: 80px 10%;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .contact-left, .contact-right {
+    width: 50%;
+  }
+  
+  .input-group {
+    margin-bottom: 25px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff5500;
+  }
+  
+  .input-group input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #333;
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    font-family: 'Days One';
+  }
+
+  .input-group input:focus {
+      border-bottom-color: #ff5500;
+  }
+  
+  .contact-right textarea {
+    width: 100%;
+    height: 200px;
+    background: transparent;
+    border: 2px solid #ff5500;
+    border-radius: 12px;
+    padding: 15px;
+    color: #fff;
+    outline: none;
+    font-family: 'Days One';
+  }
+  
+  .contact-right button {
+    background: #ff5500;
+    border: none;
+    color: #fff;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  
+  .contact-divider {
+    height: 2px;
+    background: #333;
+    margin: 60px 0 30px;
+  }
+  
+  .contact-info {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+  }
+
+  h2{
+    text-align: center;
+    margin: 30px;
+  }
+
+  header h2{
+    text-align: left;
+  }
