@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
 
-p{
+#about{
     font-size: 22px;}
 
   body {
@@ -350,5 +350,6 @@ p{
   header h2{
     text-align: left;
   }
+
 
 
