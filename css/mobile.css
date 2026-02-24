@@ -10,7 +10,9 @@ header h2, h3, h1{
     margin: 0;
 }
 
-
+#about{
+    font-weight: 200;}
+    
  .burger-icon {
         display: flex;
         flex-direction: column;
@@ -194,5 +196,6 @@ header h2, h3, h1{
 }
 
 }
+
 
 
