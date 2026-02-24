@@ -97,7 +97,7 @@ header h2, h3, h1{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        gap: 10px;
+        margin: 10px;
     }
 
     .buttons button {
@@ -141,7 +141,7 @@ header h2, h3, h1{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        margin: 30px;
     }
 
     .project {
@@ -175,7 +175,7 @@ header h2, h3, h1{
         display: flex;
         flex-direction: column; 
         align-items: center;    
-        gap: 20px;              
+        margin: 20px;              
         width: 90%;
         margin: 20px auto;
         padding: 20px;
@@ -193,3 +193,4 @@ header h2, h3, h1{
 }
 
 }
+
