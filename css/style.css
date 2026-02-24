@@ -276,7 +276,6 @@
   .contact-wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 40px;
   }
   
   .contact-left, .contact-right {
@@ -349,6 +348,7 @@
   header h2{
     text-align: left;
   }
+
 
 
 
