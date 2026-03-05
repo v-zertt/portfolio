@@ -4,9 +4,65 @@
         padding-left: 20px;
         padding-top: 20px;
     }
-.hero img[alt="Illustration"]{
-    display:none;
+/* ПОВНЕ ВИДАЛЕННЯ ВЕКТОРА */
+.hero-vector, 
+.hero img[alt="Illustration"] {
+    display: none !important;
 }
+
+/* ФІКС АНІМАЦІЇ ДРУКУ */
+.typing-text {
+    display: block;
+    font-family: 'Days One', sans-serif;
+    color: #ff5500;
+    font-size: 20px;
+    margin: 15px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #ff5500;
+    
+    /* Початковий стан */
+    width: 0;
+    
+    /* Анімація з чіткими кроками */
+    animation: typing-mob 3s steps(20) forwards, blink 0.8s step-end infinite;
+}
+
+@keyframes typing-mob {
+    from { width: 0; }
+    to { width: 230px; } /* Підібрана ширина під шрифт на мобайлі */
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #ff5500; }
+}
+
+/* ЦЕНТРУВАННЯ КНОПОК ТА ТЕКСТУ */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+}
+
+.download-cv-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+
 header h2, h3, h1{
     text-align: center;
     margin: 0;
@@ -254,6 +310,7 @@ button.outline a {
 }
 
 }
+
 
 
 
