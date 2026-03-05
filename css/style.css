@@ -561,4 +561,102 @@ button:first-child {
   }
 }
 
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 10%;
+}
+
+.hero-vector {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.typing-text {
+  display: inline-block;
+  font-family: 'Days One', sans-serif;
+  color: #ff5500;
+  font-size: 36px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ff5500;
+  max-width: 0;
+  animation: typing-animation 3.5s steps(20) forwards, blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes typing-animation {
+  from { max-width: 0; }
+  to { max-width: 100%; }
+}
+
+@keyframes blink-cursor {
+  from, to { border-color: transparent; }
+  50% { border-color: #ff5500; }
+}
+
+.images {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.download-cv-btn a {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Days One', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-vector {
+    display: none;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .typing-text {
+    font-size: 22px;
+    max-width: 0;
+    animation: typing-animation 3.5s steps(20) forwards, blink-cursor 0.75s step-end infinite;
+  }
+
+  .images {
+    justify-content: center;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  button {
+    flex: 1;
+    min-height: 50px;
+  }
+}
+
 
