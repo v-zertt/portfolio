@@ -378,3 +378,33 @@ button:first-child {
 }
 
 
+.hero-text h1 {
+  overflow: hidden; 
+  border-right: .15em solid #ff5500; /* Курсор */
+  white-space: nowrap; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ff5500 }
+}
+
+.input-group input {
+  border-bottom: 2px solid #333;
+  transition: border-color 0.4s;
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid #ff5500;
+  /* Додамо легке світіння під лінією */
+  box-shadow: 0 1px 0 0 #ff5500;
+}
