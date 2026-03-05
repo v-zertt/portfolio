@@ -1,662 +1,560 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#1a1a1a;
+  font-family:'Days One',sans-serif;
+  color:#fff;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:#ff5500;
+  font-family:'Gravitas One',serif;
+}
+
+h2{
+  text-align:center;
+  margin:30px;
+}
+
+header h2{
+  text-align:left;
+}
 
 #about{
-    font-size: 22px;}
-
-  body {
-    background-color: #1a1a1a;
-    font-family: 'Days One', sans-serif;
-    color: #ffffff;
-    line-height: 1.6;
-  }
-
-  .section-title {
-    text-align: center;
-    font-size: 36px;
-    margin: 80px 0 40px;
-    color: #fff;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #ff5500;
-    font-family: 'Gravitas One', serif;
-  }
-
-  nav {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-  }
-
-  .nav-list {
-    display: flex;
-    list-style: none;
-  }
-  
-  .nav-list li {
-    margin: 0 20px;
-    transition: 0.3s;
-  }
-  
-  .nav-list li:hover {
-    transform: scale(1.1);
-  }
-
-  .menu-toggle, .burger-icon {
-    display: none;
-  }
-
-  .hero {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 60px 10%;
-  }
-  
-  .hero-text h3 {
-    color: #888;
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  
-  .hero-text h2 {
-    font-size: 48px;
-    line-height: 1.1;
-    margin-bottom: 10px;
-  }
-  
-  .hero-text h1 {
-    font-size: 36px;
-    color: #ff5500;
-    margin-bottom: 25px;
-  }
-  
-  .images img {
-    width: 30px;
-    margin-right: 15px;
-    cursor: pointer;
-  }
-
-  .buttons {
-    margin-top: 30px;
-    display: flex;
-    margin: 15px;
-  }
-  
-  button {
-    padding: 12px 30px;
-    border-radius: 8px;
-    font-family: 'Days One';
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
-  }
-  
-  button:first-child {
-    background: #ff5500;
-    color: #fff;
-    border: none;
-  }
-
-  button:first-child:hover {
-      background: #e64d00;
-  }
-  
-  button.outline {
-    background: transparent;
-    border: 2px solid #ff5500;
-    color: #fff;
-  }
-
-  button.outline:hover {
-      background: rgba(255, 85, 0, 0.1);
-  }
-
-  .stats-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #222222;
-    width: 80%;
-    margin: 40px auto;
-    padding: 30px 60px;
-    border-radius: 20px;
-    border: 1px solid #333;
-  }
-
-  .stat-item {
-      text-align: center;
-  }
-
-  .stat-item h3 {
-      font-size: 32px;
-      color: #ff5500;
-      margin-bottom: 5px;
-  }
-
-  .stat-item p {
-      font-size: 16px;
-      color: #aaa;
-      text-transform: lowercase;
-  }
-
-  .stat-divider {
-      width: 1px;
-      height: 60px;
-      background: #444;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 30px;
-    padding: 0 10%;
-  }
-  
-  .card {
-    background: #222;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
-  }
-
-  .card:hover {
-    transform: translateY(-10px);
-    border: 1px solid #ff5500;
-  }
-  
-  .card h3 {
-    color: #ff5500;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .card p {
-      color: #bbb;
-      font-size: 15px;
-  }
-
-  .about {
-    display: flex;
-    align-items: center;
-    padding: 60px 10%;
-    margin: 50px;
-  }
-  
-  .about-text p {
-      margin-bottom: 20px;
-      color: #ccc;
-      font-size: 28px;
-  }
-  .skills {
-    padding: 0 10%;
-    margin-bottom: 100px;
-  }
-  
-  .skill {
-    margin-bottom: 30px;
-  }
-
-  .skill-info {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-  }
-  
-  .skill h3 {
-    color: #888;
-  }
-  
-  .line {
-    width: 100%;
-    height: 10px;
-    background: #ff5500;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 85, 0, 0.3);
-  }
-
-  .projects {
-    padding: 0 5%;
-  }
-  
-  .projects-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .project {
-    width: 32%;
-    text-align: center;
-  }
-  
-  .project-box {
-    width: 100%;
-    height: 200px;
-    background-color: #222;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    background-size: cover;
-    background-position: center;
-    transition: 0.4s;
-    border: 1px solid #333;
-  }
-
-  .project-box:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px rgba(255, 85, 0, 0.4);
-  }
-
-  .project-box.tall {
-    height: 280px;
-  }
-  
-  .project p {
-    font-size: 14px;
-    color: #eee;
-  }
-
-  .project p strong {
-      color: #ff5500;
-      display: block;
-      margin-bottom: 8px;
-      font-size: 18px;
-  }
-
-  .contact {
-    padding: 80px 10%;
-  }
-  
-  .contact-wrapper {
-    display: flex;
-    justify-content: space-between;
-      margin: 40px;
-  }
-  
-  .contact-left, .contact-right {
-    width: 50%;
-  }
-  
-  .input-group {
-    margin-bottom: 25px;
-  }
-  
-  .input-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #ff5500;
-  }
-  
-  .input-group input {
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #333;
-    padding: 10px 0;
-    color: #fff;
-    outline: none;
-    font-family: 'Days One';
-  }
-
-  .input-group input:focus {
-      border-bottom-color: #ff5500;
-  }
-  
-  .contact-right textarea {
-    width: 100%;
-    height: 200px;
-    background: transparent;
-    border: 2px solid #ff5500;
-    border-radius: 12px;
-    padding: 15px;
-    color: #fff;
-    outline: none;
-    font-family: 'Days One';
-  }
-  
-  .contact-right button {
-    background: #ff5500;
-    border: none;
-    color: #fff;
-    width: 100%;
-    margin-top: 15px;
-    font-size: 18px;
-  }
-  
-  .contact-divider {
-    height: 2px;
-    background: #333;
-    margin: 60px 0 30px;
-  }
-  
-  .contact-info {
-    text-align: center;
-    color: #777;
-    font-size: 14px;
-  }
-
-  h2{
-    text-align: center;
-    margin: 30px;
-  }
-
-  header h2{
-    text-align: left;
-  }
-
-.line {
-  width: 0; /* Початковий стан */
-  transition: width 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  font-size:22px;
 }
 
-.skills:hover .line {
-  width: 100%;
-}
-button:first-child {
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 0 0 rgba(255, 85, 0, 0.7);
-  animation: pulse-orange 2s infinite;
+/* ---------------- NAV ---------------- */
+
+nav{
+  display:flex;
+  justify-content:center;
+  padding:30px;
 }
 
-@keyframes pulse-orange {
-  0% { box-shadow: 0 0 0 0 rgba(255, 85, 0, 0.4); }
-  70% { box-shadow: 0 0 0 15px rgba(255, 85, 0, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 85, 0, 0); }
+.nav-list{
+  display:flex;
+  list-style:none;
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 10px 30px rgba(255, 85, 0, 0.2);
-  border-color: #ff5500;
+.nav-list li{
+  margin:0 20px;
+  transition:.3s;
 }
 
-
-.hero-text h1 {
-  display: block;
-  font-family: 'Days One', sans-serif;
-  color: #ff5500;
-  overflow: hidden; 
-  white-space: nowrap; 
-  border-right: 3px solid #ff5500;
-  
-  /* Вказуємо кількість символів: 19 знаків */
-  width: 19ch; 
-  
-  /* Анімація: typing (друк), blink (курсор) */
-  animation: 
-    typing 3s steps(19) infinite alternate,
-    blink-caret .5s step-end infinite;
+.nav-list li:hover{
+  transform:scale(1.1);
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 19ch; }
+.menu-toggle,
+.burger-icon{
+  display:none;
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #ff5500; }
+/* ---------------- TITLES ---------------- */
+
+.section-title{
+  text-align:center;
+  font-size:36px;
+  margin:80px 0 40px;
+  color:#fff;
 }
 
-/* Адаптивність для мобілок */
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 20px; /* Зменшуємо розмір, щоб влізло в один рядок */
-    letter-spacing: 0;
-    border-right-width: 2px;
+/* ---------------- HERO ---------------- */
+
+.hero{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  padding:60px 10%;
+}
+
+.hero-vector{
+  display:block;
+  width:100%;
+  max-width:500px;
+  height:auto;
+}
+
+.hero-text h3{
+  color:#888;
+  font-size:20px;
+  margin-bottom:5px;
+}
+
+.hero-text h2{
+  font-size:48px;
+  line-height:1.1;
+  margin-bottom:10px;
+}
+
+.hero-text h1{
+  display:inline-block;
+  color:#ff5500;
+  font-family:'Days One',sans-serif;
+  margin:15px auto;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right:3px solid #ff5500;
+  max-width:0;
+
+  animation:
+  typing-process 3s steps(30) infinite alternate,
+  blink-caret .7s step-end infinite;
+}
+
+.typing-text{
+  display:inline-block;
+  font-family:'Days One',sans-serif;
+  color:#ff5500;
+  font-size:36px;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right:3px solid #ff5500;
+  max-width:0;
+  animation:typing-animation 3.5s steps(20) forwards, blink-cursor .75s step-end infinite;
+}
+
+/* ---------------- SOCIAL ---------------- */
+
+.images{
+  display:flex;
+  gap:15px;
+  margin:20px 0;
+}
+
+.images img{
+  width:30px;
+  margin-right:15px;
+  cursor:pointer;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+.buttons{
+  display:flex;
+  gap:15px;
+  margin:15px;
+}
+
+button{
+  padding:12px 30px;
+  border-radius:8px;
+  font-family:'Days One';
+  cursor:pointer;
+  font-size:14px;
+  transition:.3s;
+}
+
+button:first-child{
+  position:relative;
+  overflow:hidden;
+
+  background:linear-gradient(-45deg,#ff5500,#ff8800,#e64d00,#ff5500);
+  background-size:400% 400%;
+  animation:gradient-animation 3s ease infinite,pulse-orange 2s infinite;
+
+  color:#fff;
+  border:none;
+}
+
+button:first-child:hover{
+  background:#e64d00;
+}
+
+button.outline{
+  background:transparent;
+  border:2px solid #ff5500;
+  color:#fff;
+}
+
+button.outline:hover{
+  background:rgba(255,85,0,.1);
+}
+
+.download-cv-btn a{
+  color:inherit;
+  text-decoration:none;
+  font-family:'Days One',sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:100%;
+}
+
+/* ---------------- STATS ---------------- */
+
+.stats-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#222;
+  width:80%;
+  margin:40px auto;
+  padding:30px 60px;
+  border-radius:20px;
+  border:1px solid #333;
+}
+
+.stat-item{
+  text-align:center;
+}
+
+.stat-item h3{
+  font-size:32px;
+  color:#ff5500;
+  margin-bottom:5px;
+}
+
+.stat-item p{
+  font-size:16px;
+  color:#aaa;
+  text-transform:lowercase;
+}
+
+.stat-divider{
+  width:1px;
+  height:60px;
+  background:#444;
+}
+
+/* ---------------- CARDS ---------------- */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  margin:30px;
+  padding:0 10%;
+}
+
+.card{
+  background:#222;
+  padding:40px;
+  border-radius:15px;
+  text-align:center;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 10px 30px rgba(255,85,0,.2);
+  border:1px solid #ff5500;
+}
+
+.card h3{
+  color:#ff5500;
+  font-size:24px;
+  margin-bottom:20px;
+}
+
+.card p{
+  color:#bbb;
+  font-size:15px;
+}
+
+/* ---------------- ABOUT ---------------- */
+
+.about{
+  display:flex;
+  align-items:center;
+  padding:60px 10%;
+  margin:50px;
+}
+
+.about-text p{
+  margin-bottom:20px;
+  color:#ccc;
+  font-size:28px;
+}
+
+/* ---------------- SKILLS ---------------- */
+
+.skills{
+  padding:0 10%;
+  margin-bottom:100px;
+  max-width:900px;
+  margin-inline:auto;
+}
+
+.skill{
+  margin-bottom:30px;
+}
+
+.skill-info{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+
+.skill h3{
+  color:#888;
+  margin-bottom:10px;
+  font-size:18px;
+  text-transform:uppercase;
+}
+
+.line{
+  width:0;
+  height:10px;
+  background:#ff5500;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(255,85,0,.3);
+  transition:width 1.5s cubic-bezier(.17,.67,.83,.67);
+}
+
+.skills:hover .line{
+  width:100%;
+}
+
+.line-container{
+  width:100%;
+  height:10px;
+  background:#333;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.line-fill{
+  height:100%;
+  background:#ff5500;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(255,85,0,.4);
+  width:0;
+  transition:width 1.5s cubic-bezier(.1,.42,.41,1);
+  animation:fillUp 2s ease-out;
+}
+
+/* skill lengths */
+
+.skill:nth-of-type(1) .line-fill{width:95%;}
+.skill:nth-of-type(2) .line-fill{width:70%;}
+.skill:nth-of-type(3) .line-fill{width:90%;}
+.skill:nth-of-type(4) .line-fill{width:85%;}
+
+/* ---------------- PROJECTS ---------------- */
+
+.projects{
+  padding:0 5%;
+}
+
+.projects-list{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.project{
+  width:32%;
+  text-align:center;
+}
+
+.project-box{
+  width:100%;
+  height:200px;
+  background:#222;
+  margin-bottom:20px;
+  border-radius:12px;
+  background-size:cover;
+  background-position:center;
+  transition:.4s;
+  border:1px solid #333;
+}
+
+.project-box:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 20px rgba(255,85,0,.4);
+}
+
+.project-box.tall{
+  height:280px;
+}
+
+.project p{
+  font-size:14px;
+  color:#eee;
+}
+
+.project p strong{
+  color:#ff5500;
+  display:block;
+  margin-bottom:8px;
+  font-size:18px;
+}
+
+/* ---------------- CONTACT ---------------- */
+
+.contact{
+  padding:80px 10%;
+}
+
+.contact-wrapper{
+  display:flex;
+  justify-content:space-between;
+  margin:40px;
+}
+
+.contact-left,
+.contact-right{
+  width:50%;
+}
+
+.input-group{
+  margin-bottom:25px;
+}
+
+.input-group label{
+  display:block;
+  margin-bottom:8px;
+  color:#ff5500;
+}
+
+.input-group input{
+  width:100%;
+  background:transparent;
+  border:none;
+  border-bottom:2px solid #333;
+  padding:10px 0;
+  color:#fff;
+  outline:none;
+  font-family:'Days One';
+}
+
+.input-group input:focus{
+  border-bottom:2px solid #ff5500;
+  box-shadow:0 1px 0 0 #ff5500;
+}
+
+.contact-right textarea{
+  width:100%;
+  height:200px;
+  background:transparent;
+  border:2px solid #ff5500;
+  border-radius:12px;
+  padding:15px;
+  color:#fff;
+  outline:none;
+  font-family:'Days One';
+}
+
+.contact-right button{
+  background:#ff5500;
+  border:none;
+  color:#fff;
+  width:100%;
+  margin-top:15px;
+  font-size:18px;
+}
+
+.contact-divider{
+  height:2px;
+  background:#333;
+  margin:60px 0 30px;
+}
+
+.contact-info{
+  text-align:center;
+  color:#777;
+  font-size:14px;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+
+@keyframes typing-process{
+  from{max-width:0;}
+  to{max-width:100%;}
+}
+
+@keyframes typing-animation{
+  from{max-width:0;}
+  to{max-width:100%;}
+}
+
+@keyframes blink-caret{
+  from,to{border-color:transparent;}
+  50%{border-color:#ff5500;}
+}
+
+@keyframes blink-cursor{
+  from,to{border-color:transparent;}
+  50%{border-color:#ff5500;}
+}
+
+@keyframes pulse-orange{
+  0%{box-shadow:0 0 0 0 rgba(255,85,0,.4);}
+  70%{box-shadow:0 0 0 15px rgba(255,85,0,0);}
+  100%{box-shadow:0 0 0 0 rgba(255,85,0,0);}
+}
+
+@keyframes gradient-animation{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+@keyframes fillUp{
+  from{width:0;}
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:768px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    padding:40px 5%;
   }
-}
 
-
-
-.input-group input:focus {
-  border-bottom: 2px solid #ff5500;
-  /* Додамо легке світіння під лінією */
-  box-shadow: 0 1px 0 0 #ff5500;
-}
-
-/* Контейнер секції */
-.skills {
-  padding: 0 10%;
-  margin-bottom: 100px;
-  max-width: 900px;
-  margin-inline: auto;
-}
-
-/* Окремий скіл */
-.skill {
-  margin-bottom: 30px;
-}
-
-.skill h3 {
-  color: #888;
-  margin-bottom: 10px;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-/* Контейнер для лінії (сірий фон) */
-.line-container {
-  width: 100%;
-  height: 10px;
-  background: #333;
-  border-radius: 10px;
-  overflow: hidden; /* Щоб заповнення не виходило за межі */
-}
-
-/* Заповнення (помаранчеве) */
-.line-fill {
-  height: 100%;
-  background: #ff5500;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 85, 0, 0.4);
-  width: 0; /* Початкова точка для анімації */
-  transition: width 1.5s cubic-bezier(0.1, 0.42, 0.41, 1);
-}
-
-/* Налаштування довжини для кожної лінії окремо */
-
-/* HTML */
-.skill:nth-of-type(1) .line-fill {
-  width: 95%;
-}
-
-/* JavaScript */
-.skill:nth-of-type(2) .line-fill {
-  width: 70%;
-}
-
-/* CSS */
-.skill:nth-of-type(3) .line-fill {
-  width: 90%;
-}
-
-/* Figma */
-.skill:nth-of-type(4) .line-fill {
-  width: 85%;
-}
-
-/* Анімація при завантаженні: лінії "виростають" */
-@keyframes fillUp {
-  from { width: 0; }
-}
-
-.line-fill {
-  animation: fillUp 2s ease-out;
-} 
-
-button:first-child {
-  background: linear-gradient(-45deg, #ff5500, #ff8800, #e64d00, #ff5500);
-  background-size: 400% 400%;
-  animation: gradient-animation 3s ease infinite, pulse-orange 2s infinite;
-  border: none;
-}
-
-@keyframes gradient-animation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.hero-text h1 {
-  display: inline-block; /* Важливо для центрування та ширини */
-  color: #ff5500;
-  font-family: 'Days One', sans-serif;
-  margin: 15px auto; /* Центрування */
-  overflow: hidden; 
-  white-space: nowrap; 
-  border-right: 3px solid #ff5500;
-  
-  /* Анімація */
-  max-width: 0;
-  animation: 
-    typing-process 3s steps(30) infinite alternate,
-    blink-caret 0.7s step-end infinite;
-}
-
-@keyframes typing-process {
-  from { max-width: 0; }
-  to { max-width: 100%; } /* Розгортає на всю довжину тексту */
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #ff5500; }
-}
-
-/* Налаштування для мобілок (щоб все було по центру) */
-@media (max-width: 480px) {
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .hero-vector{
+    display:none;
   }
 
-  .hero-text h1 {
-    font-size: 18px; /* Менший розмір для iPhone/Android */
-    letter-spacing: 0.5px;
-    /* Обмежуємо максимальну ширину екраном */
-    width: fit-content;
+  .hero-text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
   }
 
-  .buttons {
-    display: flex;
-    justify-content: space-around; /* Твоя умова */
-    width: 100%;
-    gap: 10px;
+  .typing-text{
+    font-size:22px;
   }
 
-  button.outline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .images{
+    justify-content:center;
+  }
+
+  .buttons{
+    width:100%;
+    justify-content:space-around;
+    gap:10px;
+  }
+
+  button{
+    flex:1;
+    min-height:50px;
   }
 }
 
-.hero {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 60px 10%;
-}
+@media(max-width:480px){
 
-.hero-vector {
-  display: block;
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-}
-
-.typing-text {
-  display: inline-block;
-  font-family: 'Days One', sans-serif;
-  color: #ff5500;
-  font-size: 36px;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #ff5500;
-  max-width: 0;
-  animation: typing-animation 3.5s steps(20) forwards, blink-cursor 0.75s step-end infinite;
-}
-
-@keyframes typing-animation {
-  from { max-width: 0; }
-  to { max-width: 100%; }
-}
-
-@keyframes blink-cursor {
-  from, to { border-color: transparent; }
-  50% { border-color: #ff5500; }
-}
-
-.images {
-  display: flex;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.download-cv-btn a {
-  color: inherit;
-  text-decoration: none;
-  font-family: 'Days One', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 5%;
+  .hero-text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
   }
 
-  .hero-vector {
-    display: none;
-  }
-
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .typing-text {
-    font-size: 22px;
-    max-width: 0;
-    animation: typing-animation 3.5s steps(20) forwards, blink-cursor 0.75s step-end infinite;
-  }
-
-  .images {
-    justify-content: center;
-  }
-
-  .buttons {
-    width: 100%;
-    justify-content: space-around;
-    gap: 10px;
-  }
-
-  button {
-    flex: 1;
-    min-height: 50px;
+  .hero-text h1{
+    font-size:18px;
+    letter-spacing:.5px;
+    width:fit-content;
   }
 }
-
-
