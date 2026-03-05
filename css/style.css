@@ -379,20 +379,25 @@ button:first-child {
 
 
 .hero-text h1 {
-  display: inline-block;
+  display: block;
+  font-family: 'Days One', sans-serif;
+  color: #ff5500;
   overflow: hidden; 
-  border-right: 0.15em solid #ff5500;
   white-space: nowrap; 
-  letter-spacing: 0.10em; 
-  max-width: fit-content; /* Обмежує ширину контентом */
+  border-right: 3px solid #ff5500;
+  
+  /* Вказуємо кількість символів: 19 знаків */
+  width: 19ch; 
+  
+  /* Анімація: typing (друк), blink (курсор) */
   animation: 
-    typing 3.5s steps(20, end),
-    blink-caret 0.5s step-end infinite;
+    typing 3s steps(19) infinite alternate,
+    blink-caret .5s step-end infinite;
 }
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 100%; }
+  to { width: 19ch; }
 }
 
 @keyframes blink-caret {
@@ -400,16 +405,15 @@ button:first-child {
   50% { border-color: #ff5500; }
 }
 
-/* Для мобільних екранів */
+/* Адаптивність для мобілок */
 @media (max-width: 480px) {
   .hero-text h1 {
-    font-size: 24px; /* Зменшуємо шрифт */
-    letter-spacing: 0.05em;
-    white-space: normal; /* Дозволяємо перенос, якщо текст задовгий */
-    animation: none; /* Вимикаємо друк, якщо він все одно ламає верстку */
-    border-right: none;
+    font-size: 20px; /* Зменшуємо розмір, щоб влізло в один рядок */
+    letter-spacing: 0;
+    border-right-width: 2px;
   }
 }
+
 
 
 .input-group input:focus {
@@ -487,4 +491,5 @@ button:first-child {
 .line-fill {
   animation: fillUp 2s ease-out;
 } 
+
 
