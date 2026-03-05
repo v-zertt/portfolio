@@ -505,4 +505,60 @@ button:first-child {
   100% { background-position: 0% 50%; }
 }
 
+.hero-text h1 {
+  display: inline-block; /* Важливо для центрування та ширини */
+  color: #ff5500;
+  font-family: 'Days One', sans-serif;
+  margin: 15px auto; /* Центрування */
+  overflow: hidden; 
+  white-space: nowrap; 
+  border-right: 3px solid #ff5500;
+  
+  /* Анімація */
+  max-width: 0;
+  animation: 
+    typing-process 3s steps(30) infinite alternate,
+    blink-caret 0.7s step-end infinite;
+}
+
+@keyframes typing-process {
+  from { max-width: 0; }
+  to { max-width: 100%; } /* Розгортає на всю довжину тексту */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #ff5500; }
+}
+
+/* Налаштування для мобілок (щоб все було по центру) */
+@media (max-width: 480px) {
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 18px; /* Менший розмір для iPhone/Android */
+    letter-spacing: 0.5px;
+    /* Обмежуємо максимальну ширину екраном */
+    width: fit-content;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-around; /* Твоя умова */
+    width: 100%;
+    gap: 10px;
+  }
+
+  button.outline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
