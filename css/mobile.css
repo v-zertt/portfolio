@@ -194,8 +194,65 @@ header h2, h3, h1{
         text-align: center;
     
 }
+/* Центруємо весь текст у Hero */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрує заголовок */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Виправляємо напис Front-End Developer */
+.hero-text h1 {
+  font-size: 22px;
+  width: auto;
+  max-width: 100%;
+  white-space: normal; /* Дозволяємо перенос, щоб не вилазило за екран */
+  border-right: none; /* Прибираємо курсор на мобілці, бо він зміщує текст */
+  animation: none; /* Вимикаємо анімацію друку для стабільності на малій ширині */
+  margin: 10px 0;
+}
+
+/* Центруємо іконки соцмереж */
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Кнопки на space-around */
+.buttons {
+  display: flex;
+  justify-content: space-around; /* Твоя умова */
+  width: 100%;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Виправляємо кнопку Download CV */
+button {
+  flex: 1; /* Кнопки однакової ширини */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 10px;
+  text-align: center;
+}
+
+button.outline a {
+  display: block;
+  width: 100%;
+  color: inherit;
+  font-family: 'Days One', sans-serif; /* Повертаємо основний шрифт */
+  font-size: 14px;
+  line-height: 1.2;
+}
 
 }
+
 
 
 
