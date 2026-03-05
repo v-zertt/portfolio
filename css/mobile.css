@@ -269,8 +269,8 @@ header h2, h3, h1{
   width: auto;
   max-width: 100%;
   white-space: normal; /* Дозволяємо перенос, щоб не вилазило за екран */
-  border-right: none; /* Прибираємо курсор на мобілці, бо він зміщує текст */
-  animation: none; /* Вимикаємо анімацію друку для стабільності на малій ширині */
+  border-right: none;
+  animation: none; 
   margin: 10px 0;
 }
 
@@ -312,6 +312,7 @@ button.outline a {
 }
 
 }
+
 
 
 
