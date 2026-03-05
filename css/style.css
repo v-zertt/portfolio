@@ -492,4 +492,17 @@ button:first-child {
   animation: fillUp 2s ease-out;
 } 
 
+button:first-child {
+  background: linear-gradient(-45deg, #ff5500, #ff8800, #e64d00, #ff5500);
+  background-size: 400% 400%;
+  animation: gradient-animation 3s ease infinite, pulse-orange 2s infinite;
+  border: none;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
