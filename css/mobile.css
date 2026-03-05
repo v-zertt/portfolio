@@ -1,324 +1,211 @@
-@media screen and (max-width: 768px) {
-    nav {
-        display: flex;
-        padding-left: 20px;
-        padding-top: 20px;
-    }
-.hero-vector, 
-.hero img[alt="Illustration"] {
-    display: none !important;
+@media screen and (max-width:768px){
+
+nav{display:flex;padding:20px 0 0 20px}
+
+.hero-vector,.hero img[alt="Illustration"]{display:none!important}
+
+.hero{display:flex;flex-direction:column;text-align:center;margin-top:40px;padding:0 20px}
+
+.hero-text{display:flex;flex-direction:column;align-items:center;text-align:center;padding:20px;width:100%}
+
+.typing-text{
+display:block;
+font-family:'Days One',sans-serif;
+color:#ff5500;
+font-size:20px;
+margin:15px auto;
+white-space:nowrap;
+overflow:hidden;
+border-right:3px solid #ff5500;
+max-width:0;
+animation:typing-mob 3s steps(20) forwards,blink .8s step-end infinite
 }
 
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@keyframes typing-mob{
+from{max-width:0}
+to{max-width:400px}
 }
 
-.typing-text {
-    display: block;
-    font-family: 'Days One', sans-serif;
-    color: #ff5500;
-    font-size: 20px;
-    margin: 15px auto;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #ff5500;
-    
-    /* Фікс: анімуємо max-width замість width */
-    max-width: 0;
-    animation: typing-mob 3s steps(20) forwards, blink 0.8s step-end infinite;
+@keyframes blink{
+from,to{border-color:transparent}
+50%{border-color:#ff5500}
 }
 
-@keyframes typing-mob {
-    from { max-width: 0; }
-    to { max-width: 400px; } /* Даємо запас, щоб весь текст вліз */
+header h1,header h2,header h3{text-align:center;margin:0}
+
+#about{font-weight:200}
+
+.images{display:flex;justify-content:center;gap:20px;margin-bottom:20px}
+
+.buttons{
+display:flex;
+justify-content:space-around;
+width:100%;
+gap:10px;
+margin:20px 0
 }
 
-@keyframes blink {
-    from, to { border-color: transparent; }
-    50% { border-color: #ff5500; }
+.buttons button{width:130px}
+
+button{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:50px;
+padding:10px;
+text-align:center
 }
 
-.buttons {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    gap: 10px;
+button.outline a{
+display:block;
+width:100%;
+color:inherit;
+font-family:'Days One',sans-serif;
+font-size:14px;
+line-height:1.2
 }
 
-.download-cv-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.download-cv-btn{display:flex;align-items:center;justify-content:center}
+
+.download-cv-btn a{
+text-decoration:none;
+color:#fff;
+font-size:13px;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:100%
 }
 
-.download-cv-btn a {
-    text-decoration: none;
-    color: white;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+.burger-icon{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+width:30px;
+height:20px;
+cursor:pointer;
+z-index:100;
+position:relative;
+margin-right:auto
 }
 
-header h2, h3, h1{
-    text-align: center;
-    margin: 0;
+.burger-icon span{
+display:block;
+width:100%;
+height:3px;
+background:#ff5500;
+border-radius:2px;
+transition:.3s
 }
 
-#about{
-    font-weight: 200;}
-    
- .burger-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-        z-index: 100;
-        position: relative;
-        margin-left: 0;
-        margin-right: auto;
-    }
-
-    .burger-icon span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #ff5500;
-        border-radius: 2px;
-        transition: 0.3s;
-    }
-
-    nav .nav-list {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 20px;
-        width: 200px;
-        background-color: #202020;
-        border: 2px solid #ff5500;
-        border-radius: 10px;
-        flex-direction: column;
-        padding: 20px;
-        margin: 0;
-        z-index: 99;
-        text-align: left;
-        align-items: flex-start;
-    }
-
-    .menu-toggle:checked ~ .nav-list {
-        display: flex;
-    }
-
-    nav li {
-        margin: 10px 0;
-        list-style: none;
-    }
-
-    nav a {
-        font-size: 18px;
-        text-decoration: none;
-    }
-
-    .menu-toggle:checked + .burger-icon span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    .menu-toggle:checked + .burger-icon span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle:checked + .burger-icon span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin-top: 40px;
-        padding: 0 20px;
-    }
-
-    .hero-text {
-        text-align: left;
-        width: 100%;
-    }
-
-    .hero img[alt="Illustration"] {
-        margin: 30px auto;
-        max-width: 80%;
-        display: block;
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        margin: 10px;
-    }
-
-    .buttons button {
-        width: 130px;
-    }
-
-    .cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 20px;
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-    }
-
-    .about {
-        display: flex;
-        flex-direction: column;
-        padding: 0 20px;
-        text-align: center;
-        align-items: center;
-    }
-
-    .about img {
-        margin-bottom: 20px;
-        max-width: 100%;
-    }
-
-    .skill {
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-
-    .projects-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 30px;
-    }
-
-    .project {
-        width: 100%;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-        padding: 0 20px;
-    }
-
-    .project-box, .project-box.tall {
-        height: 200px;
-        width: 100%;
-    }
-
-    .contact-wrapper {
-        display: flex;
-        flex-direction: column;
-        padding: 0 20px;
-        box-sizing: border-box;
-        margin: 0;
-    }
-
-    .contact-left, .contact-right {
-        width: 100%;
-    }
-
-    .contact-right button {
-        width: 100%;
-    }
-
-    .stats-container, #statistika {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;    
-        margin: 20px;              
-        width: 90%;
-        margin: 20px auto;
-        padding: 20px;
-        height: auto;   
-    }
-
-    .stat-divider, .poloska {
-        display: none;
-    }
-
-    .stat-item, .stat-blok {
-        width: 100%;
-        text-align: center;
-    
-}
-/* Центруємо весь текст у Hero */
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Центрує заголовок */
-  text-align: center;
-  padding: 20px;
+nav .nav-list{
+display:none;
+position:absolute;
+top:60px;
+left:20px;
+width:200px;
+background:#202020;
+border:2px solid #ff5500;
+border-radius:10px;
+flex-direction:column;
+padding:20px;
+margin:0;
+z-index:99;
+text-align:left;
+align-items:flex-start
 }
 
-/* Виправляємо напис Front-End Developer */
-.hero-text h1 {
-  font-size: 22px;
-  width: auto;
-  max-width: 100%;
-  white-space: normal; /* Дозволяємо перенос, щоб не вилазило за екран */
-  border-right: none;
-  animation: none; 
-  margin: 10px 0;
+.menu-toggle:checked~.nav-list{display:flex}
+
+nav li{margin:10px 0;list-style:none}
+
+nav a{font-size:18px;text-decoration:none}
+
+.menu-toggle:checked+.burger-icon span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.menu-toggle:checked+.burger-icon span:nth-child(2){opacity:0}
+.menu-toggle:checked+.burger-icon span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+
+.cards{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:0 20px
 }
 
-/* Центруємо іконки соцмереж */
-.images {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+.card{
+width:100%;
+height:auto;
+margin-bottom:20px;
+box-sizing:border-box
 }
 
-/* Кнопки на space-around */
-.buttons {
-  display: flex;
-  justify-content: space-around; /* Твоя умова */
-  width: 100%;
-  gap: 10px;
-  margin: 20px 0;
+.about{
+display:flex;
+flex-direction:column;
+padding:0 20px;
+text-align:center;
+align-items:center
 }
 
-/* Виправляємо кнопку Download CV */
-button {
-  flex: 1; /* Кнопки однакової ширини */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
-  padding: 10px;
-  text-align: center;
+.about img{
+margin-bottom:20px;
+max-width:100%
 }
 
-button.outline a {
-  display: block;
-  width: 100%;
-  color: inherit;
-  font-family: 'Days One', sans-serif; /* Повертаємо основний шрифт */
-  font-size: 14px;
-  line-height: 1.2;
+.skill{
+width:100%;
+padding:0 20px;
+box-sizing:border-box
+}
+
+.projects-list{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin:30px
+}
+
+.project{
+width:100%;
+margin-bottom:20px;
+box-sizing:border-box;
+padding:0 20px
+}
+
+.project-box,.project-box.tall{
+height:200px;
+width:100%
+}
+
+.contact-wrapper{
+display:flex;
+flex-direction:column;
+padding:0 20px;
+box-sizing:border-box;
+margin:0
+}
+
+.contact-left,.contact-right{width:100%}
+
+.contact-right button{width:100%}
+
+.stats-container,#statistika{
+display:flex;
+flex-direction:column;
+align-items:center;
+width:90%;
+margin:20px auto;
+padding:20px;
+height:auto
+}
+
+.stat-divider,.poloska{display:none}
+
+.stat-item,.stat-blok{
+width:100%;
+text-align:center
 }
 
 }
-
-
-
-
-
-
-
-
-
-
