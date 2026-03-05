@@ -379,29 +379,38 @@ button:first-child {
 
 
 .hero-text h1 {
+  display: inline-block;
   overflow: hidden; 
-  border-right: .15em solid #ff5500; /* Курсор */
+  border-right: 0.15em solid #ff5500;
   white-space: nowrap; 
-  letter-spacing: .15em; 
+  letter-spacing: 0.10em; 
+  max-width: fit-content; /* Обмежує ширину контентом */
   animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+    typing 3.5s steps(20, end),
+    blink-caret 0.5s step-end infinite;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #ff5500 }
+  from, to { border-color: transparent; }
+  50% { border-color: #ff5500; }
 }
 
-.input-group input {
-  border-bottom: 2px solid #333;
-  transition: border-color 0.4s;
+/* Для мобільних екранів */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 24px; /* Зменшуємо шрифт */
+    letter-spacing: 0.05em;
+    white-space: normal; /* Дозволяємо перенос, якщо текст задовгий */
+    animation: none; /* Вимикаємо друк, якщо він все одно ламає верстку */
+    border-right: none;
+  }
 }
+
 
 .input-group input:focus {
   border-bottom: 2px solid #ff5500;
@@ -478,3 +487,4 @@ button:first-child {
 .line-fill {
   animation: fillUp 2s ease-out;
 } 
+
